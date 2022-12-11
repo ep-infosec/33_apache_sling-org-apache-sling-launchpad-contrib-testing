@@ -1,0 +1,35 @@
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements. See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to you under the Apache License, Version
+    2.0 (the "License"); you may not use this file except in compliance
+    with the License. You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+    applicable law or agreed to in writing, software distributed under
+    the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
+    OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and
+    limitations under the License.
+  -->
+<html>
+<body>
+  <p>
+    The tests found in and under this package are used in the 
+    "integration-test" build phase (SLING-82), they are not run 
+    as part of the normal "test" build phase. 
+  </p>
+  <p>
+    To debug the integration tests, however, it is useful to run
+    them as part of the normal test phase, after starting a separate
+    Sling instance that they can talk to.
+  </p>
+  <p>
+    This is implemented using Maven profiles: to run the integration
+    tests during the normal test phase, disable the "disableIntegrationTestsInTestPhase"
+    Maven profile, for example using <code>mvn -P nullUslingProfile test</code>.
+    See pom.xml for more details.
+  </p>
+</body>
+</html>
